@@ -1,0 +1,56 @@
+//LOGIN PAGE USING SWING IN JAVA
+
+import java.awt.event.*;
+import javax.swing.*;
+
+
+class login_page extends MouseAdapter
+{
+    JFrame j1;
+    public void page()
+    {
+
+        j1 = new JFrame("Login page");
+        j1.setBounds(0,0,500,500);
+        j1.setLayout(null);
+        JLabel l1 = new JLabel("******LOGIN*******");
+        l1.setBounds(100,50,165,25);
+        JLabel l2 = new JLabel("USERNAME");
+        l2.setBounds(50,50,100,100);
+        JLabel l3 = new JLabel("PASSWORD");
+        l3.setBounds(50,100,100,100);
+        JTextField t1 = new JTextField(20);
+        t1.setBounds(150,70,100,30);
+        JPasswordField t3 = new JPasswordField();
+        t3.setBounds(150,100,100,30);
+
+        JButton b1 = new JButton("LOGIN");
+        b1.setBounds(200,200,100,100);
+        j1.add(b1);
+        b1.addMouseListener(this);
+
+
+        j1.add(l1);
+        j1.add(l2);
+        j1.add(l3);
+        j1.add(t1);
+        j1.add(t3);
+        j1.setVisible(true);
+        j1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    }
+    public void mousePressed(MouseEvent e)
+    {
+        JOptionPane.showMessageDialog(j1,"logged in");
+    }
+
+
+
+    public static void main(String[] args)
+    {
+        login_page l = new login_page();
+        l.page();
+
+
+    }
+}
